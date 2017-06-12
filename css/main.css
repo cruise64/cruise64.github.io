@@ -1,0 +1,41 @@
+html,body{
+    margin:0px;
+    padding:0px;
+    overflow-x: hidden;
+}
+html{
+    background:black;
+}
+.row{
+    margin:0px;
+}
+.splash{
+    background:black;
+    padding:50px;
+    /*text-align:center;*/
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+.orbit{
+    position: absolute;
+    font-family:Verdana;
+    display:inline-block;
+    top:300px;
+    background: -webkit-linear-gradient(#ff0080, #cc0066,#800040);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:16px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    z-index: 2
+}
+#planet{
+    z-index:1;
+    position: relative;
+}
+.navbar{
+    z-index:3;
+    opacity: 0.7;
+}
+.row{
+    background:black;
+}
