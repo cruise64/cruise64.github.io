@@ -3,14 +3,10 @@ html,body{
     padding:0px;
     overflow-x: hidden;
 }
-html{
-    background:black;
-}
 .row{
     margin:0px;
 }
 .splash{
-    background:black;
     padding:50px;
     /*text-align:center;*/
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
@@ -36,6 +32,6 @@ html{
     z-index:3;
     opacity: 0.7;
 }
-.row{
+.navrow{
     background:black;
 }
