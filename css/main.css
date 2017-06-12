@@ -22,7 +22,7 @@ html,body{
     font-size:16px;
     font-weight: 200;
     letter-spacing: 2px;
-    z-index: 2
+    z-index: 2;
 }
 #planet{
     z-index:1;
@@ -47,7 +47,9 @@ html,body{
     margin-top: -20px;
     padding-left: 10px;
     margin-bottom:20px;
+    animation:opac 0.8s;
 }
+@keyframes opac{from{opacity:0} to{opacity:1}}
 .blank{
     height:40px;
     display: block;
@@ -63,4 +65,27 @@ html,body{
 }
 #logo:hover{
     background: rgba(255, 255, 255, 0.2);
+}
+.c1{
+    animation:opac 1s;
+}
+.c1 > div{
+    text-align:center;
+    padding:25px;
+    display:inline;
+}
+.c1 > div > img{
+    width:360px;
+    height:252px;
+    margin:5px;
+    border-radius: 10px;
+    margin:auto;
+    display:block;
+}
+.c1 > div > p{
+    margin:5px;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
+    font-size:16px;
+    font-weight: 300;
+    
 }
