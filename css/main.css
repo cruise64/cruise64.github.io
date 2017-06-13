@@ -68,11 +68,15 @@ html,body{
 }
 .c1{
     animation:opac 1s;
+    min-height: 422px;
 }
 .c1 > div{
     text-align:center;
     padding:25px;
     display:inline;
+    opacity: 0;
+    transition: all 1s ease-out;
+    transform:scaleX(1.2) scaleY(1.2);
 }
 .c1 > div > img{
     width:360px;

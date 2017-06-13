@@ -1,3 +1,4 @@
+/* global $*/
 function convert(x,y,w,h){
     return [x,y*-1+h/2];
 }
@@ -52,6 +53,25 @@ function an(offset,calibrate){
         },4000);   
     }
 }
+function elementInViewport(el) {
+  var top = el.offsetTop;
+  var left = el.offsetLeft;
+  var width = el.offsetWidth;
+  var height = el.offsetHeight;
+
+  while(el.offsetParent) {
+    el = el.offsetParent;
+    top += el.offsetTop;
+    left += el.offsetLeft;
+  }
+
+  return (
+    top >= window.pageYOffset &&
+    left >= window.pageXOffset &&
+    (top + height) <= (window.pageYOffset + window.innerHeight) &&
+    (left + width) <= (window.pageXOffset + window.innerWidth)
+  );
+}
 function boot(){
     // place orbiting text in their positions first, so we don't see this happening.
     an(0,true);
@@ -66,5 +86,15 @@ function boot(){
             }
         }
     },1)
-    an(1)
+    an(1);
+    var interval = window.setInterval(function(){
+    if (elementInViewport(document.getElementById("c1"))) {
+        var childz = document.getElementById("c1").children
+        for(var i=0;i<childz.length;i++){
+            $(childz[i]).hide()
+            eval("setTimeout(function(){$(childz["+(i).toString()+"]).fadeTo(1000,1);childz["+(i).toString()+"].style.transform='scaleX(1) scaleY(1)';},i*300)");
+        }
+        window.clearInterval(interval);
+    }
+    },1000);
 }
