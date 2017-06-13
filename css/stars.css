@@ -1,7 +1,7 @@
 
 #stars {
   z-index:0;
-  position:absolute;
+  position:fixed;
   width: 1px;
   height: 1px;
   background: transparent;
@@ -21,7 +21,7 @@
 
 #stars2 {
   z-index:0;
-  position:absolute;
+  position:fixed;
   width: 2px;
   height: 2px;
   background: transparent;
@@ -31,7 +31,7 @@
 #stars2:after {
   z-index:0;
   content: " ";
-  position: absolute;
+  position: fixed;
   top: 2000px;
   width: 2px;
   height: 2px;
@@ -41,7 +41,7 @@
 
 #stars3 {
   z-index:0;
-  position:absolute;
+  position:fixed;
   width: 3px;
   height: 3px;
   background: transparent;
@@ -51,7 +51,7 @@
 #stars3:after {
   z-index:0;
   content: " ";
-  position: absolute;
+  position: fixed;
   top: 2000px;
   width: 3px;
   height: 3px;
