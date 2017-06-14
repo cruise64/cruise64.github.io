@@ -1,0 +1,46 @@
+.blank{
+    height:40px;
+    display: block;
+    background:black;
+}
+#logo{
+    margin-top:-35px;
+    transform:scaleX(0.5) scaleY(0.5);
+    transition:all .5s ease-out;
+}
+#logo > a:hover{
+    text-decoration: none;
+}
+#logo:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
+.navbar{
+    z-index:3;
+    opacity: 0.8;
+}
+.navrow{
+    background:black;
+}
+.row{
+    margin:0px;
+}
+html,body{
+    margin:0px;
+    padding:0px;
+    overflow-x: hidden;
+}
+ul.sources{
+    background:	#F5F5F5;
+    border-radius: 5px;
+    width:60%;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.blank{
+    height:40px;
+    display: block;
+    background:black;
+}

@@ -22,10 +22,10 @@ html,body{
     font-size:16px;
     font-weight: 200;
     letter-spacing: 2px;
-    z-index: 2;
+    z-index: 3;
 }
 #planet{
-    z-index:1;
+    z-index:2;
     position: relative;
 }
 .navbar{
@@ -69,6 +69,7 @@ html,body{
 .c1{
     animation:opac 1s;
     min-height: 422px;
+    overflow:hidden;
 }
 .c1 > div{
     text-align:center;

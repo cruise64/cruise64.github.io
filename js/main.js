@@ -13,7 +13,7 @@ function test(angle,planet){
     if(radius<400){
         radius = Math.min(radius*2,window.innerWidth/2)
     }
-    var x = 0 + radius * Math.cos(toRadians(angle));
+    var x = -90 + radius * Math.cos(toRadians(angle));
     var y = 450 + radius * Math.sin(toRadians(angle));
     var pos = convert(x,y,width,height); 
     return [x,y]
@@ -26,11 +26,20 @@ function moveTo(angle,planet,element){
     //console.log(pos,element)
     pos = convert(pos[0],pos[1],width,height); 
     pos[0]-=planet.width/2+30
+    // fade the text as the z axis increases
+    // do this before the actual transition so that it doesn't suddenly appear behind the planet
+    var o = Math.min(pos[1]*0.3,1);
+    // do the next statement to show all points in the negatives
+    // this really helps the orbiting effect, instead of most of the points
+    // being invisible
+    if(o<0){
+        o=100/Math.abs(pos[1])
+        element.style.zIndex=1
+    }
+    element.style.opacity = o
     // put y into the z argument, to make the orbit parrallel to the user
     // change the y axis by a portion of the z, to give the illusion of a tilted orbit.
     element.style.transform = " perspective(500px) translate3d(" + (pos[0]).toString() + "px," + (pos[1]/10).toString() + "px," + pos[1].toString() + "px)";
-    // fade the text as the z axis increases
-    element.style.opacity = Math.min(pos[1]*0.3,1)
 }
 function an(offset,calibrate){
     var x = document.getElementById("orbitz");
@@ -45,6 +54,7 @@ function an(offset,calibrate){
     }
     // right-shift positions
     for(i=0;i<x.length;i++){
+        x[i].style.zIndex=2;
         moveTo(positions[(i+offset) % (x.length)],planet,x[i]);
     }
     if(calibrate !== true){
@@ -55,21 +65,14 @@ function an(offset,calibrate){
 }
 function elementInViewport(el) {
   var top = el.offsetTop;
-  var left = el.offsetLeft;
-  var width = el.offsetWidth;
   var height = el.offsetHeight;
 
   while(el.offsetParent) {
     el = el.offsetParent;
     top += el.offsetTop;
-    left += el.offsetLeft;
   }
-
   return (
-    top >= window.pageYOffset &&
-    left >= window.pageXOffset &&
-    (top + height) <= (window.pageYOffset + window.innerHeight) &&
-    (left + width) <= (window.pageXOffset + window.innerWidth)
+    top/4 <=window.pageYOffset
   );
 }
 function boot(){
