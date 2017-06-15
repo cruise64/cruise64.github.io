@@ -54,6 +54,13 @@ html,body{
     height:40px;
     display: block;
     background:black;
+    padding:10px;
+    color:white;
+    font-family: courier;
+    letter-spacing: .08px;
+}
+.blank:before{
+    content:"Developed By Calder White © 2017";
 }
 #logo{
     margin-top:-35px;
@@ -93,4 +100,9 @@ html,body{
     font-size:16px;
     font-weight: 300;
     
+}
+#c2 > div > p{
+    margin-top:30%;
+    font-size:16px;
+    font-family: 'lato', sans-serif;
 }

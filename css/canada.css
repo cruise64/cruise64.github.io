@@ -1,0 +1,80 @@
+.row{
+    margin:0px;
+}
+.blank{
+    height:40px;
+    display: block;
+    background:black;
+    padding:10px;
+    color:white;
+    font-family: courier;
+    letter-spacing: .08px;
+}
+.blank:before{
+    content:"Developed By Calder White © 2017";
+}
+#logo{
+    margin-top:-35px;
+    transform:scaleX(0.5) scaleY(0.5);
+    transition:all .5s ease-out;
+}
+#logo > a:hover{
+    text-decoration: none;
+}
+#logo:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
+html,body{
+    background:black;
+    margin:0px;
+    padding:0px;
+    overflow-x: hidden;
+}
+.navbar{
+    z-index:3;
+    opacity: 0.8;
+}
+.navrow{
+    background:black;
+}
+.center{
+    margin:auto;
+    width:100%;
+    text-align:left;
+    z-index:2;
+    position: relative;
+}
+.tag{
+    background:	white;
+    border-radius: 5px;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    z-index:2;
+    position: relative;
+    word-wrap:break-word;
+    padding:5px;
+    padding-left:10%;
+    padding-right: 10%;
+}
+.cont1{
+    width:90%;
+    background:white;
+    display: block;
+    margin:auto;
+    padding:10px;
+    border-radius: 3px;
+}
+.cont1 > div >img{
+    height:350px;
+    border-radius: 3px;
+}
+h3{
+    text-align:center;
+    color:white;
+    margin:10px;
+    font-family: 'Roboto Slab', serif;
+    margin-bottom:40px;
+}

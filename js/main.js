@@ -13,7 +13,7 @@ function test(angle,planet){
     if(radius<400){
         radius = Math.min(radius*2,window.innerWidth/2)
     }
-    var x = -90 + radius * Math.cos(toRadians(angle));
+    var x = -45+ radius * Math.cos(toRadians(angle));
     var y = 450 + radius * Math.sin(toRadians(angle));
     var pos = convert(x,y,width,height); 
     return [x,y]

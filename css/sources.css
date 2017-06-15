@@ -3,6 +3,12 @@
     display: block;
     background:black;
 }
+html,body{
+    background:black;
+}
+.row{
+    background:white;
+}
 #logo{
     margin-top:-35px;
     transform:scaleX(0.5) scaleY(0.5);
@@ -38,9 +44,30 @@ ul.sources{
     margin-bottom:20px;
     padding-top:10px;
     padding-bottom: 10px;
+    z-index:2;
+    position: relative;
+    word-wrap:break-word;
+}
+ul > li{
+    z-index: 2;
+    position: relative;
+}
+.center{
+    margin:auto;
+    width:60%;
+    text-align:left;
+    z-index:2;
+    position: relative;
 }
 .blank{
     height:40px;
     display: block;
     background:black;
+    padding:10px;
+    color:white;
+    font-family: courier;
+    letter-spacing: .08px;
+}
+.blank:before{
+    content:"Developed By Calder White © 2017";
 }
