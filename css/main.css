@@ -106,3 +106,11 @@ html,body{
     font-size:16px;
     font-family: 'lato', sans-serif;
 }
+h2{
+    font-family: 'Raleway',sans-serif;
+    text-align:center;
+    position: relative;
+    z-index: 2;
+    margin-top:40px;
+    margin-bottom:40px;
+}
